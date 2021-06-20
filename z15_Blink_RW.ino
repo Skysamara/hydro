@@ -13,12 +13,17 @@ BLYNK_WRITE(V1) // Установка времени старта полива
   // clean stop/start fields of widget
 
   Serial.print("Таймер: ");
-//  Serial.println(pump1.GetCurrentDuration());
+  //  Serial.println(pump1.GetCurrentDuration());
 
-//  pump1.Start();
+  //  pump1.Start();
 }
 
 BLYNK_WRITE(V4) // Кнопка помпы 1
 {
-  pump1.Start(); 
+  if (param.asInt() == 0) {
+    pump1.Stop();
+  }
+  else {
+    pump1.Start();
+  }
 }

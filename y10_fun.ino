@@ -6,7 +6,7 @@ void timerEvent()
 
 void refreshApp()
 {
-//  Blynk.virtualWrite(V5, pump1.GetCurrentDuration());
+  Blynk.virtualWrite(V5, pump1.GetCurrentDuration());
 //  Blynk.virtualWrite(V4, pump1.IsON());
 }
 
