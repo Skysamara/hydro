@@ -14,8 +14,8 @@
 #define led_pin 2 // D4
 
 boolean led_status = 0;
-//float Temperature;
-//float Humidity;
+
+const int timeSleep = 60*1000*1000; // одна минута
 
 DHT dht(DHTPin, DHTTYPE); // Инициализация датчика DHT
 BlynkTimer timer;

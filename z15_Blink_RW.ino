@@ -12,10 +12,17 @@ BLYNK_WRITE(V1) // Установка времени старта полива
   // until you remove widget or stop project or
   // clean stop/start fields of widget
 
-  Serial.print("Таймер: ");
+  Serial.print("BLYNK_WRITE(V1) // Установка времени старта полива: ");
+  Serial.println(param.asStr());
   //  Serial.println(pump1.GetCurrentDuration());
 
-  //  pump1.Start();
+  if (param.asInt() == 1){
+        pump1.Start();
+  }
+  else{
+      pump1.Stop();
+  }
+
 }
 
 BLYNK_WRITE(V4) // Кнопка помпы 1
